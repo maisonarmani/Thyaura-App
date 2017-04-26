@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include thyaura_app *.css
+recursive-include thyaura_app *.csv
+recursive-include thyaura_app *.html
+recursive-include thyaura_app *.ico
+recursive-include thyaura_app *.js
+recursive-include thyaura_app *.json
+recursive-include thyaura_app *.md
+recursive-include thyaura_app *.png
+recursive-include thyaura_app *.py
+recursive-include thyaura_app *.svg
+recursive-include thyaura_app *.txt
+recursive-exclude thyaura_app *.pyc
