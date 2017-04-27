@@ -7,12 +7,20 @@
  "doctype": "Report", 
  "idx": 0, 
  "is_standard": "Yes", 
- "modified": "2016-10-27 13:07:36.724155", 
- "modified_by": "Administrator", 
+ "modified": "2017-04-26 13:50:49.143190", 
+ "modified_by": "Administrator",
  "module": "Thyaura",
  "name": "Petty Cash Log Report", 
  "owner": "Administrator", 
  "ref_doctype": "Petty Cash Log", 
  "report_name": "Petty Cash Log Report", 
- "report_type": "Script Report"
+ "report_type": "Script Report", 
+ "roles": [
+  {
+   "role": "Accounts Manager"
+  }, 
+  {
+   "role": "All"
+  }
+ ]
 }
