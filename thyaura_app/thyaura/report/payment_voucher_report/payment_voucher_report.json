@@ -9,7 +9,7 @@
  "is_standard": "Yes", 
  "modified": "2016-11-11 14:57:09.900561", 
  "modified_by": "Administrator", 
- "module": "Graceco Tools", 
+ "module": "Thyaura",
  "name": "Payment Voucher Report", 
  "owner": "Administrator", 
  "ref_doctype": "Payment Voucher Form", 
