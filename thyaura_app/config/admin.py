@@ -67,7 +67,7 @@ def get_data():
 			"items": [
 				{
 					"type": "report",
-					"name": "Payment Voucher Report",
+					"name": "Payment Voucher Form Report",
 					"doctype": "Payment Voucher Form",
 					"is_query_report": True,
 				},
@@ -87,12 +87,6 @@ def get_data():
 					"type": "report",
 					"name": "Fixed Asset Inspection Checklist Report",
 					"doctype": "Fixed Asset Inspection Checklist",
-					"is_query_report": True,
-				},
-				{
-					"type": "report",
-					"name": "Daily Route Activity Report",
-					"doctype": "Daily Route Activity",
 					"is_query_report": True,
 				},
 			]

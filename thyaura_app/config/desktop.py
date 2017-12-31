@@ -6,9 +6,12 @@ def get_data():
 	return [
 		{
 			"module_name": "Thyaura",
-			"color": "pink",
+			"color": "#934bec",
+			"doctype": "File",
 			"icon": "octicon octicon-file-directory",
+			"label": _("Thyaura"),
+			"link": "modules/Thyaura",
 			"type": "module",
-			"label": _("Thyaura")
-		}
+			"hidden": 0
+		},
 	]

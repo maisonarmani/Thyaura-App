@@ -9,4 +9,4 @@ from frappe.desk.form.load import getdoctype
 
 @frappe.whitelist()
 def test_doctype():
-    print getdoctype(doctype="Purchase Order", with_parent = 1)
+    print getdoctype(doctype="Daily Route Activity", with_parent = 1)
