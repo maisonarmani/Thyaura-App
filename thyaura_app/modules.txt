@@ -1,4 +1,4 @@
 Thyaura App
 Thyaura
 Admin
-_Stock
+__Stock
