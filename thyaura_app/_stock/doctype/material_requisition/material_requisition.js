@@ -11,7 +11,7 @@ frappe.ui.form.on('Material Requisition', {
     },
     customer:function(frm){
         frappe.call({
-            method: "erpnext.stock.doctype.material_requisition.material_requisition.get_details",
+            method: "thyaura_app._stock.doctype.material_requisition.material_requisition.get_details",
             args:{customer:frm.doc.customer},
             callback:function(rt){
                 cur_frm.set_value('customer_address',rt.message.customer_address);
@@ -37,7 +37,7 @@ cur_frm.cscript.material_delivery_note = function () {
     cur_frm.add_custom_button(__('Material Delivery Note'),
         function () {
             frappe.model.open_mapped_doc({
-                method: "erpnext.stock.doctype.material_requisition.material_requisition.make_delivery_note",
+                method: "thyaura_app._stock.doctype.material_requisition.material_requisition.make_delivery_note",
                 frm: cur_frm
             });
         }

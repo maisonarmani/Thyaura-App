@@ -12,6 +12,7 @@ def get_data():
 					"name": "Payment Voucher Form",
 					"description": _("Payment Voucher Form"),
 				},
+
 				{
 					"type": "doctype",
 					"name": "Petty Cash Log",
@@ -65,6 +66,17 @@ def get_data():
 			"label": _("Reports"),
 			"icon": "icon-star",
 			"items": [
+				{
+					"type": "report",
+					"name": "Employee Report Summary",
+					"doctype": "Employee",
+					"is_query_report": True,
+				},{
+					"type": "report",
+					"name": "Stock Delivered Reconciliation",
+					"doctype": "Stock Entry",
+					"is_query_report": True,
+				},
 				{
 					"type": "report",
 					"name": "Payment Voucher Report",

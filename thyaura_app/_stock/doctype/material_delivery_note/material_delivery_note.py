@@ -10,6 +10,9 @@ from frappe.model.document import Document
 import frappe
 
 
+class UpdateException(Exception):
+    pass
+
 class MaterialDeliveryNote(Document):
     mt_req_del_setup = {}
     def on_submit(self):
@@ -27,6 +30,10 @@ class MaterialDeliveryNote(Document):
         self.update_items_de_stock()
         self.validate_items()
         return True
+
+    def update_mdn(self, se):
+        frappe.db.sql(
+            "UPDATE `tabMaterial Delivery Note` SET stock_entry='%s' WHERE name = '%s'" % (se.name, self.name))
 
     def validate_items(self):
         for item in self.get('items'):
@@ -60,7 +67,7 @@ class MaterialDeliveryNote(Document):
                 "valuation_rate": 0,
             })
 
-        # create new stock entry
+        # create new    stock entry
         # remove item qty that has been delivered to stock
         stock_entry = frappe.get_doc({
             "doctype": "Stock Entry",
@@ -75,4 +82,8 @@ class MaterialDeliveryNote(Document):
         })
 
         stock_entry.insert()
-        stock_entry.submit()
+        try:
+            self.update_mdn(stock_entry)
+            stock_entry.submit()
+        except UpdateException:
+            pass

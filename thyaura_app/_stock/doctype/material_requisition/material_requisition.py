@@ -22,7 +22,8 @@ def _make_delivery_note(source_name, target_doc=None, ignore_permissions=False):
     def set_missing_values(source, target):
         target.ignore_pricing_rule = 1
         target.flags.ignore_permissions = ignore_permissions
-        target.parent= source_name
+        target.parent = source_name
+        target.material_requisition = source_name
 
     # target.run_method("set_missing_values")
     # target.run_method("calculate_taxes_and_totals")
@@ -41,8 +42,6 @@ def _make_delivery_note(source_name, target_doc=None, ignore_permissions=False):
             }
         },
     }, target_doc, set_missing_values, ignore_permissions=ignore_permissions)
-
-    # postprocess: fetch shipping address, set missing values
 
     return doclist
 

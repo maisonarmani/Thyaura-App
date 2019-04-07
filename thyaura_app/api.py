@@ -7,6 +7,10 @@ import frappe
 from frappe.desk.form.load import getdoctype
 
 
-@frappe.whitelist()
 def test_doctype():
-    print getdoctype(doctype="Daily Route Activity", with_parent = 1)
+    print getdoctype(doctype="Daily Route Activity", with_parent=1)
+
+
+# just to get back on track
+def map_mdn_stck():
+    frappe.db.sql("UPDATE `tabMaterial Delivery Note` set material_requisition = parent")
