@@ -8,7 +8,7 @@ from frappe.desk.form.load import getdoctype
 
 
 def test_doctype():
-    print getdoctype(doctype="Daily Route Activity", with_parent=1)
+    print(getdoctype(doctype="Daily Route Activity", with_parent=1))
 
 
 # just to get back on track

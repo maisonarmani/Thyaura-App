@@ -10,7 +10,7 @@
  "letter_head": "Thyaura", 
  "modified": "2018-06-20 10:37:29.344585", 
  "modified_by": "Administrator", 
- "module": "_Stock", 
+ "module": "__Stock",
  "name": "Stock Delivered Reconciliation", 
  "owner": "Administrator", 
  "ref_doctype": "Stock Entry", 

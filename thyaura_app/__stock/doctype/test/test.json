@@ -56,7 +56,7 @@
  "max_attachments": 0, 
  "modified": "2018-01-06 13:43:32.750141", 
  "modified_by": "Administrator", 
- "module": "_Stock", 
+ "module": "__Stock",
  "name": "Test", 
  "name_case": "", 
  "owner": "Administrator", 
